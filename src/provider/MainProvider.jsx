@@ -23,7 +23,11 @@ export const MainProvider = ({ children }) => {
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--primaryColor",
-      data?.data?.primary_color ? data?.data?.primary_color : "#FF8100"
+      data?.data?.primary_color ? data?.data?.primary_color : "#02A486"
+    );
+    document.documentElement.style.setProperty(
+      "--secondaryColor",
+      data?.data?.base_color ? data?.data?.base_color : "#fff"
     );
     if (data) {
       dispatch(setPrimaryColor(data?.data?.primary_color));

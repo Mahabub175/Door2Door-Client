@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  primaryColor: "#FF8100",
+  primaryColor: "#02A486",
   secondaryColor: "#FFF",
   textColor: "#000000",
 };
