@@ -3,20 +3,22 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import AllDeliveries from "../pages/Dashboard/Deliveries/AllDeliveries";
 
 //icons
+import { RiQuestionnaireLine, RiHospitalLine } from "react-icons/ri";
 import {
-  RiQuestionnaireLine,
-  RiHospitalLine,
-  RiMoneyDollarCircleLine,
-} from "react-icons/ri";
-import { TbTruckDelivery, TbFileInvoice, TbReportMoney } from "react-icons/tb";
+  TbTruckDelivery,
+  TbFileInvoice,
+  TbReportMoney,
+  TbBellDollar,
+  TbMessageReport,
+} from "react-icons/tb";
 import { LuStore } from "react-icons/lu";
-import { CiFacebook, CiDiscount1 } from "react-icons/ci";
 import { BiCabinet } from "react-icons/bi";
 import { BsPeople, BsBarChartLine } from "react-icons/bs";
-import { PiBellRingingBold } from "react-icons/pi";
 import { LuSquareCode } from "react-icons/lu";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { LuLayoutDashboard } from "react-icons/lu";
+import { PiFacebookLogoBold } from "react-icons/pi";
+import { HiOutlineReceiptPercent } from "react-icons/hi2";
 
 export const userPaths = [
   {
@@ -79,7 +81,7 @@ export const userPaths = [
     name: "Facebook Group",
     section: "Quick links",
     path: "facebook-group",
-    icon: CiFacebook,
+    icon: PiFacebookLogoBold,
     element: <AllDeliveries />,
   },
   {
@@ -115,19 +117,19 @@ export const userPaths = [
   {
     name: "Report Issue",
     path: "report-issue",
-    icon: PiBellRingingBold,
+    icon: TbMessageReport,
     element: <AllDeliveries />,
   },
   {
     name: "Payment Info",
     path: "payment-info",
-    icon: RiMoneyDollarCircleLine,
+    icon: TbBellDollar,
     element: <AllDeliveries />,
   },
   {
     name: "Promo",
     path: "promo",
-    icon: CiDiscount1,
+    icon: HiOutlineReceiptPercent,
     element: <AllDeliveries />,
   },
   {
