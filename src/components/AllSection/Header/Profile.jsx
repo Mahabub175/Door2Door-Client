@@ -63,7 +63,7 @@ const Profile = () => {
   );
 
   return (
-    <div className="flex gap-2 lg:gap-10 items-center text-white">
+    <div className="flex gap-2 lg:gap-8 items-center text-white">
       <Button
         type="primary"
         size="large"
@@ -71,21 +71,21 @@ const Profile = () => {
       >
         New Delivery
       </Button>
-      <div className="bg-white shadow text-black p-2 rounded-full cursor-pointer hover:bg-primary hover:text-white duration-300">
-        <FaRegBell size={24} />
+      <div className="bg-primary shadow text-white p-2 rounded-full cursor-pointer hover:bg-white hover:text-primary duration-300">
+        <FaRegBell className="size-5 lg:size-6" />
       </div>
       <Popover
         placement="bottomLeft"
         content={<div className="p-2 text-xs"> {content} </div>}
-        className="mr-2 cursor-pointer bg-primary rounded-full px-3 py-2"
+        className="cursor-pointer bg-primary rounded-full lg:px-3 lg:py-2 -mr-2 lg:mr-0"
       >
         <div className="flex items-center gap-1">
-          <Avatar size={32} icon={<UserOutlined />} />
+          <Avatar className="size-9 lg:size-8" icon={<UserOutlined />} />
           <div className="hidden lg:flex flex-col">
             <p className="text-sm font-semibold">Fashion House</p>
             <p className="text-xs">D2D Courier</p>
           </div>
-          <MdOutlineArrowDropDown size={20} />
+          <MdOutlineArrowDropDown size={20} className="hidden lg:block" />
         </div>
       </Popover>
     </div>
