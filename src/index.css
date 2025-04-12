@@ -70,6 +70,13 @@
   transition: all 0.3s ease;
 }
 
+.ant-table-thead {
+  background-color: #000 !important;
+}
+.ant-table-cell::before {
+  display: none !important;
+}
+
 .ant-menu .ant-menu-item-selected {
   background-color: var(--primaryColor) !important;
   color: #f1f1f1 !important;

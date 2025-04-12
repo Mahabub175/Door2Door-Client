@@ -22,6 +22,7 @@ export const theme = ({ primaryColor, secondaryColor }) => {
         stickyScrollBarBg: secondaryColor,
         stickyScrollBarBorderRadius: "0 0 10px 10px",
         cellPaddingBlock: 8,
+        headerBg: "#EBEEF0",
       },
       Menu: {
         itemHoverBg: secondaryColor,

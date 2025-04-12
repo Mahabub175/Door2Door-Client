@@ -20,6 +20,7 @@ import { LuLayoutDashboard } from "react-icons/lu";
 import { PiFacebookLogoBold } from "react-icons/pi";
 import { HiOutlineReceiptPercent } from "react-icons/hi2";
 import NewDelivery from "../pages/Dashboard/Deliveries/NewDelivery";
+import Store from "../pages/Dashboard/Store/Store";
 
 export const userPaths = [
   {
@@ -75,7 +76,7 @@ export const userPaths = [
     name: "Store",
     path: "store",
     icon: LuStore,
-    element: <AllDeliveries />,
+    element: <Store />,
   },
   {
     name: "Help Center",
