@@ -30,6 +30,7 @@ import PaymentInfo from "../pages/Dashboard/PaymentInfo/PaymentInfo";
 import Promo from "../pages/Dashboard/Promo/Promo";
 import DeveloperApi from "../pages/Dashboard/DeveloperApi/DeveloperApi";
 import PackagingPoly from "../pages/Dashboard/PackagingPoly/PackagingPoly";
+import Operator from "../pages/Dashboard/Operator/Operator";
 
 export const userPaths = [
   {
@@ -124,7 +125,7 @@ export const userPaths = [
     name: "Operators",
     path: "operators",
     icon: BsPeople,
-    element: <AllDeliveries />,
+    element: <Operator />,
   },
   {
     name: "Coverage Area",
