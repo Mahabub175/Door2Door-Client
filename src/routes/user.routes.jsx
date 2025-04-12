@@ -26,6 +26,8 @@ import CreateStore from "../pages/Dashboard/Store/CreateStore";
 import PricingPlan from "../pages/Dashboard/PricingPlan/PricingPlan";
 import CoverageArea from "../pages/Dashboard/CoverageArea/CoverageArea";
 import ReportIssue from "../pages/Dashboard/ReportIssue/ReportIssue";
+import PaymentInfo from "../pages/Dashboard/PaymentInfo/PaymentInfo";
+import Promo from "../pages/Dashboard/Promo/Promo";
 
 export const userPaths = [
   {
@@ -138,13 +140,13 @@ export const userPaths = [
     name: "Payment Info",
     path: "payment-info",
     icon: TbBellDollar,
-    element: <AllDeliveries />,
+    element: <PaymentInfo />,
   },
   {
     name: "Promo",
     path: "promo",
     icon: HiOutlineReceiptPercent,
-    element: <AllDeliveries />,
+    element: <Promo />,
   },
   {
     name: "Developers API",
