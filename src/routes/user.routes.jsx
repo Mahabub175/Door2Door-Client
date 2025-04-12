@@ -19,6 +19,7 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { PiFacebookLogoBold } from "react-icons/pi";
 import { HiOutlineReceiptPercent } from "react-icons/hi2";
+import NewDelivery from "../pages/Dashboard/Deliveries/NewDelivery";
 
 export const userPaths = [
   {
@@ -55,6 +56,12 @@ export const userPaths = [
         name: "Reverse Delivery",
         path: "deliveries/reverse-delivery",
         element: <AllDeliveries />,
+      },
+      {
+        name: "New Delivery",
+        path: "deliveries/new-delivery",
+        element: <NewDelivery />,
+        hide: true,
       },
     ],
   },

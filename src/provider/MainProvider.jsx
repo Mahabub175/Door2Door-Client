@@ -45,7 +45,7 @@ export const MainProvider = ({ children }) => {
       }}
     >
       <RouterProvider router={router}>{children}</RouterProvider>
-      <Toaster position="top-center" richColors duration={2000} />
+      <Toaster position="top-center" richColors closeButton duration={2000} />
     </ConfigProvider>
   );
 };

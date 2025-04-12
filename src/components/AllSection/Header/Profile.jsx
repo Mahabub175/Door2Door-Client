@@ -4,9 +4,9 @@ import { toast } from "sonner";
 import { logout } from "../../../redux/services/auth/authSlice";
 import { UserOutlined } from "@ant-design/icons";
 import { IoSettingsOutline } from "react-icons/io5";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdOutlineArrowDropDown } from "react-icons/md";
-import { FaRegBell } from "react-icons/fa";
+import Notification from "../../Shared/Components/Notification";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -64,16 +64,17 @@ const Profile = () => {
 
   return (
     <div className="flex gap-2 lg:gap-8 items-center text-white">
-      <Button
-        type="primary"
-        size="large"
-        className="font-normal lg:px-5 hidden lg:block"
-      >
-        New Delivery
-      </Button>
-      <div className="bg-primary shadow text-white p-2 rounded-full cursor-pointer hover:bg-white hover:text-primary duration-300">
-        <FaRegBell className="size-5 lg:size-6" />
-      </div>
+      <Link to="/deliveries/new-delivery">
+        <Button
+          type="primary"
+          size="large"
+          className="font-normal lg:px-5 hidden lg:block"
+        >
+          New Delivery
+        </Button>
+      </Link>
+
+      <Notification />
       <Popover
         placement="bottomLeft"
         content={<div className="p-2 text-xs"> {content} </div>}

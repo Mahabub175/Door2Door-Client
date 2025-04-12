@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 
 export const sidebarItemsGenerator = (items, collapsed) => {
   return items.reduce((acc, item, index) => {
+    if (item.hide) return acc;
+
     if (item.section && !collapsed) {
       acc.push({
         key: `section-${index}`,
@@ -29,7 +31,7 @@ export const sidebarItemsGenerator = (items, collapsed) => {
       </NavLink>
     );
 
-    if (item.path && item.name) {
+    if (item.path && item.name && !item.children) {
       acc.push({
         key: item.name,
         icon: item.icon
@@ -39,21 +41,25 @@ export const sidebarItemsGenerator = (items, collapsed) => {
       });
     }
 
-    if (item.children) {
-      acc.push({
-        key: item.name,
-        icon: item.icon
-          ? React.createElement(item.icon, { className: "size-5" })
-          : null,
-        label: item.name,
-        children: item.children.map((child) => ({
-          key: child.name,
-          icon: child.icon
-            ? React.createElement(child.icon, { className: "size-5" })
+    if (item.children && item.children.length > 0) {
+      const visibleChildren = item.children.filter((child) => !child.hide);
+
+      if (visibleChildren.length > 0) {
+        acc.push({
+          key: item.name,
+          icon: item.icon
+            ? React.createElement(item.icon, { className: "size-5" })
             : null,
-          label: renderLabel(child.name, child.path),
-        })),
-      });
+          label: item.name,
+          children: visibleChildren.map((child) => ({
+            key: child.name,
+            icon: child.icon
+              ? React.createElement(child.icon, { className: "size-5" })
+              : null,
+            label: renderLabel(child.name, child.path),
+          })),
+        });
+      }
     }
 
     return acc;
