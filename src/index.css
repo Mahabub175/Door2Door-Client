@@ -63,8 +63,18 @@
   text-decoration: underline;
 }
 
-.custom-menu .ant-menu-item::after {
-  border-bottom: none !important;
+.ant-menu .ant-menu-item:hover {
+  background-color: var(--primaryColor) !important;
+  color: #f1f1f1 !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.ant-menu .ant-menu-item-selected {
+  background-color: var(--primaryColor) !important;
+  color: #f1f1f1 !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .ant-form-item-label {
