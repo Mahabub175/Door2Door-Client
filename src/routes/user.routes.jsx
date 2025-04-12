@@ -28,6 +28,8 @@ import CoverageArea from "../pages/Dashboard/CoverageArea/CoverageArea";
 import ReportIssue from "../pages/Dashboard/ReportIssue/ReportIssue";
 import PaymentInfo from "../pages/Dashboard/PaymentInfo/PaymentInfo";
 import Promo from "../pages/Dashboard/Promo/Promo";
+import DeveloperApi from "../pages/Dashboard/DeveloperApi/DeveloperApi";
+import PackagingPoly from "../pages/Dashboard/PackagingPoly/PackagingPoly";
 
 export const userPaths = [
   {
@@ -152,12 +154,12 @@ export const userPaths = [
     name: "Developers API",
     path: "developers-api",
     icon: LuSquareCode,
-    element: <AllDeliveries />,
+    element: <DeveloperApi />,
   },
   {
     name: "Packaging Poly",
     path: "packaging-poly",
     icon: MdOutlineShoppingBag,
-    element: <AllDeliveries />,
+    element: <PackagingPoly />,
   },
 ];
