@@ -21,6 +21,7 @@ import { PiFacebookLogoBold } from "react-icons/pi";
 import { HiOutlineReceiptPercent } from "react-icons/hi2";
 import NewDelivery from "../pages/Dashboard/Deliveries/NewDelivery";
 import Store from "../pages/Dashboard/Store/Store";
+import HelpCenter from "../pages/Dashboard/HelpCenter/HelpCenter";
 
 export const userPaths = [
   {
@@ -82,7 +83,7 @@ export const userPaths = [
     name: "Help Center",
     path: "help-center",
     icon: RiQuestionnaireLine,
-    element: <AllDeliveries />,
+    element: <HelpCenter />,
     new: true,
   },
   {
