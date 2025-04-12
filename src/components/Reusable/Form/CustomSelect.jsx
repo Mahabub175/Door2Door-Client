@@ -33,7 +33,7 @@ const CustomSelect = ({
         loading={loading}
         disabled={disabled}
         onChange={onChange}
-        placeholder={placeholder ? placeholder : `Please Select ${label}`}
+        placeholder={placeholder ? placeholder : `Select ${label}`}
         allowClear
         size="large"
         options={options}

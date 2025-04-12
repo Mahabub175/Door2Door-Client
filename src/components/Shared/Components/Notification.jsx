@@ -109,7 +109,7 @@ const Notification = () => {
   return (
     <Popover content={content} title="Notifications" trigger="click">
       <Badge count={unreadCount} offset={[-2, 5]} className="cursor-pointer">
-        <div className="bg-primary text-white p-2 rounded-full hover:bg-white hover:text-primary duration-300">
+        <div className="bg-primary text-white p-2 rounded-full hover:bg-white hover:text-primary duration-300 border border-primary">
           <FaRegBell className="size-5 lg:size-6" />
         </div>
       </Badge>

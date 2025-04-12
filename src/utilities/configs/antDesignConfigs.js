@@ -21,7 +21,7 @@ export const theme = ({ primaryColor, secondaryColor }) => {
         headerSplitColor: primaryColor,
         stickyScrollBarBg: secondaryColor,
         stickyScrollBarBorderRadius: "0 0 10px 10px",
-        cellPaddingBlock: 8,
+        cellPaddingBlock: 20,
         headerBg: "#EBEEF0",
       },
       Menu: {

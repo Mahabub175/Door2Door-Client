@@ -1,7 +1,3 @@
-//components
-import Dashboard from "../pages/Dashboard/Dashboard";
-import AllDeliveries from "../pages/Dashboard/Deliveries/AllDeliveries";
-
 //icons
 import { RiQuestionnaireLine, RiHospitalLine } from "react-icons/ri";
 import {
@@ -19,9 +15,15 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { PiFacebookLogoBold } from "react-icons/pi";
 import { HiOutlineReceiptPercent } from "react-icons/hi2";
+
+//components
+import Dashboard from "../pages/Dashboard/Dashboard";
+import AllDeliveries from "../pages/Dashboard/Deliveries/AllDeliveries";
 import NewDelivery from "../pages/Dashboard/Deliveries/NewDelivery";
 import Store from "../pages/Dashboard/Store/Store";
 import HelpCenter from "../pages/Dashboard/HelpCenter/HelpCenter";
+import CreateStore from "../pages/Dashboard/Store/CreateStore";
+import PricingPlan from "../pages/Dashboard/PricingPlan/PricingPlan";
 
 export const userPaths = [
   {
@@ -103,13 +105,13 @@ export const userPaths = [
     name: "Create Store",
     path: "create-store",
     icon: RiHospitalLine,
-    element: <AllDeliveries />,
+    element: <CreateStore />,
   },
   {
     name: "Pricing Plan",
     path: "pricing-plan",
     icon: TbReportMoney,
-    element: <AllDeliveries />,
+    element: <PricingPlan />,
   },
   {
     name: "Operators",

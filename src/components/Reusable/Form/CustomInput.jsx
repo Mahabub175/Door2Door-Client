@@ -18,7 +18,7 @@ const CustomInput = ({
     >
       {(type === "password" && (
         <Input.Password
-          placeholder={`Please Enter ${label}`}
+          placeholder={`Enter ${label}`}
           size="large"
           allowClear
           max={max}
@@ -26,7 +26,7 @@ const CustomInput = ({
       )) ||
         (type === "textarea" && (
           <Input.TextArea
-            placeholder={`Please Enter ${label}`}
+            placeholder={`Enter ${label}`}
             size="large"
             allowClear
             max={max}
@@ -34,7 +34,7 @@ const CustomInput = ({
         )) || (
           <Input
             type={type}
-            placeholder={placeholder ? placeholder : `Please Enter ${label}`}
+            placeholder={placeholder ? placeholder : `Enter ${label}`}
             size="large"
             allowClear
             value={value}

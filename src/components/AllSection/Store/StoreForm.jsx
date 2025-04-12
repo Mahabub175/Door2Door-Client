@@ -26,7 +26,7 @@ const StoreForm = () => {
       <div className="three-grid">
         <CustomSelect label={"City"} name={"city"} required={true} />
         <CustomSelect label={"Zone"} name={"zone"} required={true} />
-        <CustomSelect label={"area"} name={"city"} required={true} />
+        <CustomSelect label={"Area"} name={"city"} required={true} />
       </div>
       <CustomInput
         type="textarea"
