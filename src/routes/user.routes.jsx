@@ -25,6 +25,7 @@ import HelpCenter from "../pages/Dashboard/HelpCenter/HelpCenter";
 import CreateStore from "../pages/Dashboard/Store/CreateStore";
 import PricingPlan from "../pages/Dashboard/PricingPlan/PricingPlan";
 import CoverageArea from "../pages/Dashboard/CoverageArea/CoverageArea";
+import ReportIssue from "../pages/Dashboard/ReportIssue/ReportIssue";
 
 export const userPaths = [
   {
@@ -95,6 +96,7 @@ export const userPaths = [
     path: "facebook-group",
     icon: PiFacebookLogoBold,
     element: <AllDeliveries />,
+    link: "https://www.facebook.com/groups/1272471483507271",
   },
   {
     name: "Bulk Delivery",
@@ -130,7 +132,7 @@ export const userPaths = [
     name: "Report Issue",
     path: "report-issue",
     icon: TbMessageReport,
-    element: <AllDeliveries />,
+    element: <ReportIssue />,
   },
   {
     name: "Payment Info",

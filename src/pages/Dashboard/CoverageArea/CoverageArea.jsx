@@ -53,17 +53,17 @@ const CoverageArea = () => {
 
   return (
     <section className="flex flex-col lg:flex-row justify-between items-center gap-5">
-      <div className="bg-white p-5 rounded-lg w-4/6">
+      <div className="bg-white p-5 rounded-lg lg:w-4/6">
         <div className="mb-4 border-b pb-4">
-          <h1 className="text-2xl font-medium mb-4">Our Coverage Areas</h1>
+          <h2 className="text-2xl font-medium mb-4">Our Coverage Areas</h2>
           <p className="text-base text-textColor">
             We are currently available in 64 districts. We are constantly
             expanding to more places every day!
           </p>
         </div>
 
-        <div className="flex items-center justify-between">
-          <h3 className="text-2xl font-medium w-full">
+        <div className="flex items-center justify-between gap-5">
+          <h3 className="text-xl lg:text-2xl font-medium w-full">
             Districts with Our Presence
           </h3>
           <Input
@@ -74,7 +74,7 @@ const CoverageArea = () => {
           />
         </div>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-8 grid grid-cols-2 lg:grid-cols-3 gap-5">
           {data.map((item) => (
             <div
               key={item.id}
@@ -86,7 +86,7 @@ const CoverageArea = () => {
               } hover:border-primary duration-300 cursor-pointer p-5 rounded-lg`}
             >
               <h3 className="text-xl font-medium mb-2">{item.name}</h3>
-              <div className="flex flex-wrap gap-10 mt-4 text-base">
+              <div className="flex flex-wrap gap-2 lg:gap-10 mt-4 text-base">
                 <div>{item?.zoneCount || 0} Zone(s)</div>
                 <div>{item?.areaCount || 0} Areas</div>
               </div>
@@ -126,11 +126,11 @@ const CoverageArea = () => {
                 }`}
               />
             )}
-            className="bg-[#F5F8FA] p-0 mb-5 rounded-lg space-y-4"
+            className="bg-[#F5F8FA] p-0 mb-5 rounded-lg"
             items={selectedDistrict.zone.map((zone) => ({
               key: zone.id,
               label: (
-                <div className="flex justify-between items-center text-base font-medium">
+                <div className="flex justify-between items-center text-base font-medium ">
                   <span>{zone.name}</span>
                   <span>{zone.area?.length || 0} Areas</span>
                 </div>
