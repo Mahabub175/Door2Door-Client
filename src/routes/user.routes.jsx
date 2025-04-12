@@ -24,6 +24,7 @@ import Store from "../pages/Dashboard/Store/Store";
 import HelpCenter from "../pages/Dashboard/HelpCenter/HelpCenter";
 import CreateStore from "../pages/Dashboard/Store/CreateStore";
 import PricingPlan from "../pages/Dashboard/PricingPlan/PricingPlan";
+import CoverageArea from "../pages/Dashboard/CoverageArea/CoverageArea";
 
 export const userPaths = [
   {
@@ -123,7 +124,7 @@ export const userPaths = [
     name: "Coverage Area",
     path: "coverage-area",
     icon: BsBarChartLine,
-    element: <AllDeliveries />,
+    element: <CoverageArea />,
   },
   {
     name: "Report Issue",

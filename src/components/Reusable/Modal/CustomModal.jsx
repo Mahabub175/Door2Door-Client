@@ -1,12 +1,19 @@
 import { Modal } from "antd";
 
-const CustomModal = ({ setOpen, open, children, title, loading }) => {
+const CustomModal = ({
+  setOpen,
+  open,
+  children,
+  title,
+  loading,
+  width = 1000,
+}) => {
   return (
     <Modal
       open={open}
       onCancel={() => setOpen(false)}
       title={title}
-      width={1000}
+      width={width}
       destroyOnClose
       centered
       footer={null}
