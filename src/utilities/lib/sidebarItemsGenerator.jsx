@@ -17,27 +17,48 @@ export const sidebarItemsGenerator = (items, collapsed) => {
       });
     }
 
-    const renderLabel = (name, path) => (
-      <NavLink
-        className={({ isActive }) => (isActive ? "font-bold" : "")}
-        to={`/${path}`}
-      >
-        {name}
-        {item.new && (
-          <span className="ml-5 px-2 py-0.5 text-xs font-bold text-white bg-primary rounded-full">
-            New
-          </span>
-        )}
-      </NavLink>
-    );
+    const renderLabel = (name, path, link) => {
+      const content = (
+        <>
+          {name}
+          {item.new && (
+            <span className="ml-5 px-2 py-0.5 text-xs font-bold text-white bg-primary rounded-full">
+              New
+            </span>
+          )}
+        </>
+      );
 
-    if (item.path && item.name && !item.children) {
+      if (link) {
+        return (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2"
+          >
+            {content}
+          </a>
+        );
+      }
+
+      return (
+        <NavLink
+          className={({ isActive }) => (isActive ? "font-bold" : "")}
+          to={`/${path}`}
+        >
+          {content}
+        </NavLink>
+      );
+    };
+
+    if (item.name && (item.path || item.link) && !item.children) {
       acc.push({
         key: item.name,
         icon: item.icon
           ? React.createElement(item.icon, { className: "size-5" })
           : null,
-        label: renderLabel(item.name, item.path),
+        label: renderLabel(item.name, item.path, item.link),
       });
     }
 
@@ -56,7 +77,7 @@ export const sidebarItemsGenerator = (items, collapsed) => {
             icon: child.icon
               ? React.createElement(child.icon, { className: "size-5" })
               : null,
-            label: renderLabel(child.name, child.path),
+            label: renderLabel(child.name, child.path, child.link),
           })),
         });
       }

@@ -32,6 +32,7 @@ import DeveloperApi from "../pages/Dashboard/DeveloperApi/DeveloperApi";
 import PackagingPoly from "../pages/Dashboard/PackagingPoly/PackagingPoly";
 import Operator from "../pages/Dashboard/Operator/Operator";
 import Invoice from "../pages/Dashboard/Invoice/Invoice";
+import BulkDelivery from "../pages/Dashboard/Deliveries/BulkDelivery";
 
 export const userPaths = [
   {
@@ -99,7 +100,6 @@ export const userPaths = [
   {
     name: "Facebook Group",
     section: "Quick links",
-    path: "facebook-group",
     icon: PiFacebookLogoBold,
     element: <AllDeliveries />,
     link: "https://www.facebook.com/groups/1272471483507271",
@@ -108,7 +108,7 @@ export const userPaths = [
     name: "Bulk Delivery",
     path: "bulk-delivery",
     icon: BiCabinet,
-    element: <AllDeliveries />,
+    element: <BulkDelivery />,
   },
   {
     name: "Create Store",
