@@ -1,6 +1,7 @@
-import { Button, Select } from "antd";
+import { Select } from "antd";
 import invoice from "../../../assets/images/truck.png";
 import { DatePicker } from "antd";
+import { MdOutlineArrowDropDown } from "react-icons/md";
 const { RangePicker } = DatePicker;
 
 const Invoice = () => {
@@ -10,7 +11,16 @@ const Invoice = () => {
         <h2 className="text-2xl font-medium">Invoice List</h2>
 
         <div className="flex gap-5">
-          <Select showSearch placeholder={"Type"} allowClear size="large" />
+          <Select
+            showSearch
+            placeholder={"Type"}
+            allowClear
+            size="large"
+            suffixIcon={
+              <MdOutlineArrowDropDown className="text-primary text-2xl" />
+            }
+            className="lg:w-2/6"
+          />
           <RangePicker
             size="large"
             allowClear
@@ -25,9 +35,6 @@ const Invoice = () => {
           There is no invoice available yet. Generated invoices will be shown
           here when available.
         </p>
-        <Button size="large" className="font-normal">
-          Add Invoice
-        </Button>
       </div>
     </section>
   );

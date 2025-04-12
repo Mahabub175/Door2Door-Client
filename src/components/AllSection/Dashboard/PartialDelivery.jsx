@@ -33,7 +33,9 @@ const PartialDelivery = () => {
               name={"phone"}
               required={true}
             />
-            <FormButton />
+            <div className="lg:w-2/3">
+              <FormButton />
+            </div>
           </CustomForm>
         </div>
       </div>

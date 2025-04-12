@@ -11,7 +11,7 @@ const data = [
 const CodDetails = () => {
   return (
     <section className="mt-5 lg:mt-10">
-      <h3 className="text-2xl lg:text-3xl font-medium">
+      <h3 className="text-lg lg:text-2xl xxl:text-3xl font-medium">
         Cash on Delivery (COD) Details
       </h3>
       <div className="flex flex-col lg:flex-row gap-5">

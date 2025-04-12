@@ -1,4 +1,4 @@
-import { Popover, Badge, Spin, List, Avatar, Tooltip } from "antd";
+import { Popover, Badge, Spin, List, Avatar } from "antd";
 import { useState } from "react";
 import { FaRegBell } from "react-icons/fa";
 import { CheckOutlined, MailOutlined } from "@ant-design/icons";
@@ -44,7 +44,7 @@ const Notification = () => {
   const unreadCount = notifications.filter((n) => !n.read).length;
 
   const content = (
-    <div className="w-[300px] max-h-[300px] overflow-y-auto">
+    <div className="w-[320px] max-h-[300px] overflow-y-auto">
       {loading ? (
         <Spin />
       ) : (
@@ -54,7 +54,7 @@ const Notification = () => {
           locale={{ emptyText: "No notifications" }}
           renderItem={(item) => (
             <List.Item
-              className={`group relative px-3 py-2 rounded-md transition mb-2 ${
+              className={`group relative py-2 rounded-md transition mb-2 !px-2 ${
                 !item.read
                   ? "bg-yellow-50 border-l-4 border-primary"
                   : "hover:bg-gray-100"
@@ -79,14 +79,12 @@ const Notification = () => {
                       {item.title}
                     </span>
                     {!item.read && (
-                      <Tooltip title="Mark as read">
-                        <button
-                          onClick={() => markAsRead(item.id)}
-                          className="text-xs ml-2 text-primary underline hover:text-primary/80"
-                        >
-                          Mark as read
-                        </button>
-                      </Tooltip>
+                      <button
+                        onClick={() => markAsRead(item.id)}
+                        className="text-xs ml-2 text-primary underline hover:text-primary/80"
+                      >
+                        Mark as read
+                      </button>
                     )}
                   </div>
                 }

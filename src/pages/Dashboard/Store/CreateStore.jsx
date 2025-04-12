@@ -23,7 +23,9 @@ const CreateStore = () => {
         </h1>
         <CustomForm>
           <StoreForm />
-          <FormButton />
+          <div className="lg:w-3/6">
+            <FormButton />
+          </div>
         </CustomForm>
       </div>
     </section>

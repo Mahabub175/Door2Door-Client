@@ -1,4 +1,5 @@
 import { Form, Select } from "antd";
+import { MdOutlineArrowDropDown } from "react-icons/md";
 
 const CustomSelect = ({
   label,
@@ -13,6 +14,7 @@ const CustomSelect = ({
   value = null,
   onChange,
   noStyle,
+  suffixIcon = <MdOutlineArrowDropDown className="text-primary text-2xl" />,
 }) => {
   const filterOption = (input, option) =>
     (option?.label ?? "")?.toLowerCase().includes(input?.toLowerCase());
@@ -38,6 +40,7 @@ const CustomSelect = ({
         size="large"
         options={options}
         value={value}
+        suffixIcon={suffixIcon}
         className="w-full"
       />
     </Form.Item>

@@ -51,7 +51,7 @@ const MainLayout = () => {
             style={{
               marginBottom: 0,
             }}
-            className={"p-5"}
+            className={"p-2 lg:p-5"}
           >
             <Outlet />
           </Content>

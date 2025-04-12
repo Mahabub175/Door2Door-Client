@@ -3,6 +3,7 @@ import CustomSelect from "../../../Reusable/Form/CustomSelect";
 import CustomInput from "../../../Reusable/Form/CustomInput";
 import FormButton from "../../../Reusable/Form/FormButton";
 import { Button } from "antd";
+import CustomCounterInput from "../../../Reusable/Form/CustomCounterInput";
 
 const DeliveryForm = () => {
   return (
@@ -79,7 +80,7 @@ const DeliveryForm = () => {
                     name={"totalWeight"}
                     required={true}
                   />
-                  <CustomInput
+                  <CustomCounterInput
                     label={"Quantity"}
                     name={"quantity"}
                     required={true}
@@ -106,7 +107,9 @@ const DeliveryForm = () => {
               type={"textarea"}
               required={true}
             />
-            <FormButton />
+            <div className="lg:w-4/6">
+              <FormButton />
+            </div>
           </CustomForm>
         </div>
       </div>

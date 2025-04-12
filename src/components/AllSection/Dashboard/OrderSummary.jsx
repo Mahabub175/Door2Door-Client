@@ -16,18 +16,20 @@ const data = [
 const OrderSummary = () => {
   return (
     <section className="mt-5 lg:mt-10">
-      <h3 className="text-2xl lg:text-3xl font-medium">Summary</h3>
+      <h3 className="text-xl lg:text-3xl font-medium">Summary</h3>
       <div className="flex flex-col lg:flex-row gap-5">
         <div className="bg-white p-5 mt-5 rounded-lg w-full">
           <div className="flex flex-wrap justify-between items-center">
             <div className="flex flex-wrap items-center gap-4 text-base">
-              <p className="text-2xl font-medium">0 Orders</p>
-              <p className="text-textColor">
-                (0 orders Pending) Currently active
-              </p>
-              <p className="w-3 h-3 bg-primary rounded-full"></p>
+              <p className="text-xl lg:text-2xl font-medium">0 Orders</p>
+              <div className="flex items-center gap-2 lg:gap-4">
+                <p className="text-textColor">
+                  (0 orders Pending) Currently active
+                </p>
+                <p className="w-3 h-3 bg-primary rounded-full"></p>
+              </div>
             </div>
-            <div className="text-base text-textColor flex items-center gap-4">
+            <div className="text-base text-textColor flex items-center gap-4 mt-2 lg:mt-0">
               <p>See order amount?</p>
               <FaInfoCircle className="text-primary" />
             </div>
@@ -48,7 +50,7 @@ const OrderSummary = () => {
           </div>
         </div>
         <div className="bg-white p-5 lg:mt-5 rounded-lg lg:w-2/6">
-          <p className="text-xl text-textColor font-medium mb-4">
+          <p className="text-lg xxl:text-xl text-textColor font-medium mb-4">
             Today&apos;s Sorted Order
           </p>
           <p className="text-2xl font-bold">0</p>
