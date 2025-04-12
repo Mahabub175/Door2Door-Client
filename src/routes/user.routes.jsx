@@ -31,6 +31,7 @@ import Promo from "../pages/Dashboard/Promo/Promo";
 import DeveloperApi from "../pages/Dashboard/DeveloperApi/DeveloperApi";
 import PackagingPoly from "../pages/Dashboard/PackagingPoly/PackagingPoly";
 import Operator from "../pages/Dashboard/Operator/Operator";
+import Invoice from "../pages/Dashboard/Invoice/Invoice";
 
 export const userPaths = [
   {
@@ -80,7 +81,7 @@ export const userPaths = [
     name: "Invoices",
     path: "invoices",
     icon: TbFileInvoice,
-    element: <AllDeliveries />,
+    element: <Invoice />,
   },
   {
     name: "Store",
