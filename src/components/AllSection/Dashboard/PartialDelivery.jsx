@@ -4,8 +4,9 @@ import CustomForm from "../../Reusable/Form/CustomForm";
 import CustomInput from "../../Reusable/Form/CustomInput";
 import CustomSelect from "../../Reusable/Form/CustomSelect";
 import FormButton from "../../Reusable/Form/FormButton";
+import { Link } from "react-router-dom";
 
-const PartialDelivery = () => {
+const PartialDeliveryForm = () => {
   return (
     <section>
       <div className="bg-white p-5 mt-5 rounded-lg w-full flex flex-col gap-4">
@@ -14,12 +15,15 @@ const PartialDelivery = () => {
             Partial Delivery Order
             <FaInfoCircle className="text-primary inline-block ml-2" />
           </p>
-          <p className="text-base font-medium cursor-pointer hover:text-primary duration-300">
+          <Link
+            to={"/bulk-delivery"}
+            className="text-base font-medium cursor-pointer hover:text-primary duration-300"
+          >
             Bulk Delivery
             <IoIosArrowForward className="text-primary inline-block ml-2" />
-          </p>
+          </Link>
         </div>
-        <div className="lmt-4">
+        <div className="mt-4">
           <CustomForm>
             <CustomSelect label={"Store"} name={"store"} required={true} />
             <CustomInput
@@ -43,4 +47,4 @@ const PartialDelivery = () => {
   );
 };
 
-export default PartialDelivery;
+export default PartialDeliveryForm;

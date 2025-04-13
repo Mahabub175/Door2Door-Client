@@ -1,8 +1,8 @@
 import { FaInfoCircle } from "react-icons/fa";
 import OrderSummary from "../../components/AllSection/Dashboard/OrderSummary";
 import CodDetails from "../../components/AllSection/Dashboard/CodDetails";
-import PartialDelivery from "../../components/AllSection/Dashboard/PartialDelivery";
 import AgentMessage from "../../components/AllSection/Dashboard/AgentMessage";
+import PartialDeliveryForm from "../../components/AllSection/Dashboard/PartialDelivery";
 
 const AdminDashboard = () => {
   return (
@@ -14,7 +14,7 @@ const AdminDashboard = () => {
         </div>
         <OrderSummary />
         <CodDetails />
-        <PartialDelivery />
+        <PartialDeliveryForm />
       </div>
       <div className="lg:w-1/2 xxl:w-2/6">
         <AgentMessage />

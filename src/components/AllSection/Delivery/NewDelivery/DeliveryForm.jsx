@@ -4,6 +4,7 @@ import CustomInput from "../../../Reusable/Form/CustomInput";
 import FormButton from "../../../Reusable/Form/FormButton";
 import { Button } from "antd";
 import CustomCounterInput from "../../../Reusable/Form/CustomCounterInput";
+import { Link } from "react-router-dom";
 
 const DeliveryForm = () => {
   return (
@@ -12,15 +13,25 @@ const DeliveryForm = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center">
           <p className="text-2xl font-medium">New Delivery</p>
           <div className="flex flex-wrap justify-center items-center gap-5 mt-5 lg:mt-0">
-            <Button type="primary" size="large" className="font-normal lg:px-5">
-              Create Delivery Link
-            </Button>
-            <Button size="large" className="font-normal lg:px-5">
-              Bulk Order
-            </Button>
-            <Button size="large" className="font-normal lg:px-5">
-              Partial Delivery
-            </Button>
+            <Link to={"/deliveries/delivery-link"}>
+              <Button
+                type="primary"
+                size="large"
+                className="font-normal lg:px-5"
+              >
+                Create Delivery Link
+              </Button>
+            </Link>
+            <Link to={"/bulk-delivery"}>
+              <Button size="large" className="font-normal lg:px-5">
+                Bulk Order
+              </Button>
+            </Link>
+            <Link to={"/deliveries/partial-delivery"}>
+              <Button size="large" className="font-normal lg:px-5">
+                Partial Delivery
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="mt-4">

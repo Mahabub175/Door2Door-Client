@@ -33,6 +33,8 @@ import PackagingPoly from "../pages/Dashboard/PackagingPoly/PackagingPoly";
 import Operator from "../pages/Dashboard/Operator/Operator";
 import Invoice from "../pages/Dashboard/Invoice/Invoice";
 import BulkDelivery from "../pages/Dashboard/Deliveries/BulkDelivery";
+import PartialDelivery from "../pages/Dashboard/Deliveries/PartialDelivery";
+import DeliveryLink from "../pages/Dashboard/Deliveries/DeliveryLink";
 
 export const userPaths = [
   {
@@ -74,6 +76,18 @@ export const userPaths = [
         name: "New Delivery",
         path: "deliveries/new-delivery",
         element: <NewDelivery />,
+        hide: true,
+      },
+      {
+        name: "Partial Delivery",
+        path: "deliveries/partial-delivery",
+        element: <PartialDelivery />,
+        hide: true,
+      },
+      {
+        name: "Delivery Link",
+        path: "deliveries/delivery-link",
+        element: <DeliveryLink />,
         hide: true,
       },
     ],
