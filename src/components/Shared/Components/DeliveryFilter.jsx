@@ -5,7 +5,7 @@ const { RangePicker } = DatePicker;
 
 const DeliveryFilter = () => {
   return (
-    <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-5 mb-10">
+    <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-5 mb-5">
       <Input placeholder="Consignment ID" prefix={<BsSearch />} size="large" />
       <Input placeholder="Order ID" prefix={<BsSearch />} size="large" />
       <Select
