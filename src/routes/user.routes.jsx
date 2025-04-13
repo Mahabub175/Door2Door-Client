@@ -39,6 +39,7 @@ import ActiveDeliveries from "../pages/Dashboard/Deliveries/ActiveDeliveries";
 import DeliveredDeliveries from "../pages/Dashboard/Deliveries/DeliveredDeliveries";
 import ReturnedDeliveries from "../pages/Dashboard/Deliveries/ReturnedDeliveries";
 import ReverseDeliveries from "../pages/Dashboard/Deliveries/ReverseDeliveries";
+import UserProfile from "../pages/Dashboard/Profile/UserProfile";
 
 export const userPaths = [
   {
@@ -181,5 +182,12 @@ export const userPaths = [
     path: "packaging-poly",
     icon: MdOutlineShoppingBag,
     element: <PackagingPoly />,
+  },
+  {
+    name: "Profile",
+    path: "profile",
+    icon: MdOutlineShoppingBag,
+    element: <UserProfile />,
+    hide: true,
   },
 ];
