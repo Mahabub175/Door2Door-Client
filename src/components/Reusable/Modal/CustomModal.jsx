@@ -20,7 +20,7 @@ const CustomModal = ({
       loading={loading}
       keyboard={true}
     >
-      <div className="lg:p-5">{children}</div>
+      <div className="lg:p-2">{children}</div>
     </Modal>
   );
 };

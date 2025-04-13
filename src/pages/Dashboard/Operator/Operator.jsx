@@ -1,13 +1,21 @@
 import { Button } from "antd";
 import operator from "../../../assets/images/operator.png";
+import { useState } from "react";
+import CreateOperator from "../../../components/AllSection/Operator/CreateOperator";
 
 const Operator = () => {
+  const [openCreate, setOpenCreate] = useState(false);
   return (
     <section>
       <div className="flex flex-wrap justify-center lg:justify-between items-center gap-5 mt-5 mb-10">
         <h2 className="text-2xl font-medium">Operator List</h2>
 
-        <Button size="large" type="primary" className="font-normal">
+        <Button
+          size="large"
+          type="primary"
+          className="font-normal"
+          onClick={() => setOpenCreate(true)}
+        >
           Add Operator
         </Button>
       </div>
@@ -19,10 +27,15 @@ const Operator = () => {
           <br className="hidden lg:block" />
           someone to operate the account on your behalf.
         </p>
-        <Button size="large" className="font-normal">
+        <Button
+          size="large"
+          className="font-normal"
+          onClick={() => setOpenCreate(true)}
+        >
           Add Operator
         </Button>
       </div>
+      <CreateOperator open={openCreate} setOpen={setOpenCreate} />
     </section>
   );
 };
