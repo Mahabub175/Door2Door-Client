@@ -17,10 +17,11 @@ export default {
       },
       colors: {
         primary: "var(--primaryColor)",
-        secondary: "#2563EB",
+        primaryLight: "#C5FFE0",
+        secondary: "#C5FFE0",
         pdf: "#F87171",
         excel: "#22C55E",
-        light: "#EFF6FF",
+        light: "#F5F8FA",
         textColor: "#71717A",
       },
       screens: {

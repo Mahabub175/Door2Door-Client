@@ -7,7 +7,7 @@ const Operator = () => {
   const [openCreate, setOpenCreate] = useState(false);
   return (
     <section>
-      <div className="flex flex-wrap justify-center lg:justify-between items-center gap-5 mt-5 mb-10">
+      <div className="flex flex-wrap justify-center lg:justify-between items-center gap-5 mb-10">
         <h2 className="text-2xl font-medium">Operator List</h2>
 
         <Button

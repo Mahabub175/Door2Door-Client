@@ -35,6 +35,10 @@ import Invoice from "../pages/Dashboard/Invoice/Invoice";
 import BulkDelivery from "../pages/Dashboard/Deliveries/BulkDelivery";
 import PartialDelivery from "../pages/Dashboard/Deliveries/PartialDelivery";
 import DeliveryLink from "../pages/Dashboard/Deliveries/DeliveryLink";
+import ActiveDeliveries from "../pages/Dashboard/Deliveries/ActiveDeliveries";
+import DeliveredDeliveries from "../pages/Dashboard/Deliveries/DeliveredDeliveries";
+import ReturnedDeliveries from "../pages/Dashboard/Deliveries/ReturnedDeliveries";
+import ReverseDeliveries from "../pages/Dashboard/Deliveries/ReverseDeliveries";
 
 export const userPaths = [
   {
@@ -55,22 +59,22 @@ export const userPaths = [
       {
         name: "Active",
         path: "deliveries/active",
-        element: <AllDeliveries />,
+        element: <ActiveDeliveries />,
       },
       {
         name: "Delivered",
         path: "deliveries/delivered",
-        element: <AllDeliveries />,
+        element: <DeliveredDeliveries />,
       },
       {
         name: "Returned",
         path: "deliveries/returned",
-        element: <AllDeliveries />,
+        element: <ReturnedDeliveries />,
       },
       {
         name: "Reverse Delivery",
         path: "deliveries/reverse-delivery",
-        element: <AllDeliveries />,
+        element: <ReverseDeliveries />,
       },
       {
         name: "New Delivery",
